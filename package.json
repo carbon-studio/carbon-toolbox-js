@@ -1,0 +1,62 @@
+{
+  "name": "@carbon-studio/toolbox",
+  "version": "0.0.1",
+  "repository": "https://github.com/carbon-studio/toolbox-js.git",
+  "author": "carbon-studio",
+  "contributors": [
+    {
+      "name": "Guan Chao",
+      "url": "https://github.com/levid-gc"
+    }
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/toolbox.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "husky": "^6.0.0",
+    "size-limit": "^4.11.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/toolbox.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/toolbox.esm.js",
+      "limit": "10 KB"
+    }
+  ]
+}
