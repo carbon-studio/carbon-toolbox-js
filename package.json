@@ -1,13 +1,18 @@
 {
   "name": "@carbon-studio/toolbox",
-  "version": "0.0.1",
-  "repository": "https://github.com/carbon-studio/toolbox-js.git",
+  "description": "Carbon Toolbox",
+  "version": "0.0.2",
+  "bugs": {
+    "url": "https://github.com/carbon-studio/toolbox-js/issues"
+  },
+  "homepage": "https://github.com/carbon-studio/toolbox-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbon-studio/toolbox-js.git"
+  },
   "author": "carbon-studio",
   "contributors": [
-    {
-      "name": "Guan Chao",
-      "url": "https://github.com/levid-gc"
-    }
+    "Guan Chao (https://github.com/levid-gc)"
   ],
   "license": "MIT",
   "main": "dist/index.js",
@@ -29,6 +34,7 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
+  "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.11.0",
@@ -58,5 +64,11 @@
       "path": "dist/toolbox.esm.js",
       "limit": "10 KB"
     }
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "carbon-studio"
   ]
 }
